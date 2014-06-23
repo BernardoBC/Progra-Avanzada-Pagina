@@ -1,18 +1,15 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="Default.aspx.vb" Inherits="_Default" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="Main" Runat="Server">
     
-        <asp:Button ID="Button1" runat="server" Text="Button" />
-    
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Veterinaria.</h1>
+        <p>La mejor veterinaria del país.</p>
+        <a href="#">Learn More</a>
+      </div>
     </div>
-    </form>
-</body>
-</html>
+</asp:Content>
+
