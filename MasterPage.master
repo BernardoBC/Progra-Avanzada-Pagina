@@ -24,11 +24,17 @@
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="Default.aspx">Home</a></li>
-                    <li><a href="DueñosYAnimales.aspx">Dueños y Animales</a></li>
-                    <li><a href="Medicamentos.aspx">Medicamentos</a></li>
-                    <li><a href="Citas.aspx">Citas</a></li>
-                    <li><a href="Facturas.aspx">Historial Facturas</a></li>
+                                        
+                    <li class="<% if (GetActive()== "default")
+                            { %>active<% } %>"><a href="Default.aspx">Home</a></li>
+                    <li class="<% if (GetActive() == "animales")
+                            { %>active<% } %>"><a href="Animales.aspx">Dueños y Animales</a></li>
+                    <li class="<% if (GetActive()== "medicamentos")
+                            { %>active<% } %>"><a href="Medicamentos.aspx">Medicamentos</a></li>
+                    <li class="<% if (GetActive()== "citas")
+                            { %>active<% } %>"><a href="Citas.aspx">Citas</a></li>
+                    <li class="<% if (GetActive()== "facturas")
+                            { %>active<% } %>"><a href="Facturas.aspx">Historial Facturas</a></li>
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
