@@ -28,7 +28,7 @@
                     <li class="<% if (GetActive()== "default")
                             { %>active<% } %>"><a href="Default.aspx">Home</a></li>
                     <li class="<% if (GetActive() == "animales")
-                            { %>active<% } %>"><a href="Animales.aspx">Dueños y Animales</a></li>
+                            { %>active<% } %>"><a href="Animales.aspx">Dueños y Animales</a></li>                   
                     <li class="<% if (GetActive()== "medicamentos")
                             { %>active<% } %>"><a href="Medicamentos.aspx">Medicamentos</a></li>
                     <li class="<% if (GetActive()== "citas")
