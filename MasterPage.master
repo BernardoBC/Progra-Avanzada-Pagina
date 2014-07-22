@@ -34,7 +34,9 @@
                     <li class="<% if (GetActive()== "citas")
                             { %>active<% } %>"><a href="Citas.aspx">Citas</a></li>
                     <li class="<% if (GetActive()== "facturas")
-                            { %>active<% } %>"><a href="Facturas.aspx">Historial Facturas</a></li>
+                            { %>active<% } %>"><a href="Facturas.aspx">Historial Facturas</a></li>                   
+
+                    
                 </ul>
             </div><!--/.nav-collapse -->
         </div>

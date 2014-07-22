@@ -9,66 +9,74 @@
             <div class="well bs-component">
               <form class="form-horizontal">
                 <fieldset>
-                  <legend>Legend</legend>
+                  <legend>Crear Citas</legend>
                   <div class="form-group">
-                    <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                    <label for="inputAnimalID" class="col-lg-2 control-label">Animal ID</label>
                     <div class="col-lg-10">
-                      <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                      <input type="text" class="form-control" id="inputAnimalID" placeholder="Animal ID">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputPassword" class="col-lg-2 control-label">Password</label>
-                    <div class="col-lg-10">
-                      <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-                      <div class="checkbox">
-                        <label>
-                          <input type="checkbox"> Checkbox
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="textArea" class="col-lg-2 control-label">Textarea</label>
-                    <div class="col-lg-10">
-                      <textarea class="form-control" rows="3" id="textArea"></textarea>
-                      <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-lg-2 control-label">Radios</label>
-                    <div class="col-lg-10">
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
-                          Option one is this
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                          Option two can be something else
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="select" class="col-lg-2 control-label">Selects</label>
-                    <div class="col-lg-10">
-                      <select class="form-control" id="select">
+                    <label for="select" class="col-lg-2 control-label">Fecha dd/mm/aaaa</label>                    
+                    <div class="col-md-3">
+                        <select class="form-control" id="selectDia">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
                         <option>4</option>
                         <option>5</option>
-                      </select>
-                      <br>
-                      <select multiple="" class="form-control">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                      </select>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                        <option>15</option>
+                        <option>16</option>
+                        <option>17</option>
+                        <option>18</option>
+                        <option>19</option>
+                        <option>20</option>
+                        <option>21</option>
+                        <option>22</option>
+                        <option>23</option>
+                        <option>24</option>
+                        <option>25</option>
+                        <option>26</option>
+                        <option>27</option>
+                        <option>28</option>
+                        <option>29</option>
+                        <option>30</option>
+                        <option>31</option>
+                      </select> 
+                    </div>
+                    <div class="col-md-3">
+                        <select class="form-control" id="selectMes">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                            <option>12</option>
+                        </select> 
+                    </div>
+                    <div class="col-md-3">
+                        <select class="form-control" id="selectAño">
+                            <option>2010</option>
+                            <option>2011</option>
+                            <option>2012</option>
+                            <option>2013</option>
+                            <option>2014</option>
+                        </select> 
                     </div>
                   </div>
                   <div class="form-group">
@@ -81,7 +89,7 @@
               </form>
             <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div></div>
           </div>
-</div>
+    </div>
 
 </asp:Content>
 
