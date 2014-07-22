@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 
-</asp:Content>//un update a citas
+</asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Main" Runat="Server">
     <div class="containter">
 	<div class="col-lg-6">
