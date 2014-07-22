@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-﻿// Comentario.
-using System;
-=======
-//coment.
 ﻿using System;
->>>>>>> e23df2c7171f09718d461e9104fa2a3af9188709
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
