@@ -20,10 +20,11 @@ public partial class Citas : System.Web.UI.Page
         String mes = inputMes.Value;
         String año = inputAño.Value;
         int id;
+        String fecha = dia+"/"+mes+"/"+año;
 
         SqlConnection sqlconnect = new SqlConnection("Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Database.mdf;Integrated Security=True");
-        
-
-
+        string stmt = "INSERT INTO Database.Citas(Animal, Fecha, Descripcion) VALUES("+animalID+","+fecha+","+descrip+")";
+        SqlCommand insert = new SqlCommand(stmt,sqlconnect);
+        insert.ExecuteNonQuery();     
     }
 }
