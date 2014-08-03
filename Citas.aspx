@@ -90,10 +90,10 @@
                       <button class="btn btn-default">Cancel</button>
                       <asp:Button ID="Button1"  class="btn btn-primary" runat="server" Text="Submit" OnClick="Button1_Click" />                    
                       
+                        
+                      
                     </div>
-                  </div>
-                </fieldset>
-              </form>
+                  </div>                
             <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div></div>
           </div>
     </div>
@@ -101,60 +101,19 @@
 
     <div class="container">
         <div class="col-lg-6">
-        <table class="table table-striped table-hover " runat="server">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Column heading</th>
-              <th>Column heading</th>
-              <th>Column heading</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>Column content</td>
-              <td>Column content</td>
-              <td>Column content</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Column content</td>
-              <td>Column content</td>
-              <td>Column content</td>
-            </tr>
-            <tr class="info">
-              <td>3</td>
-              <td>Column content</td>
-              <td>Column content</td>
-              <td>Column content</td>
-            </tr>
-            <tr class="success">
-              <td>4</td>
-              <td>Column content</td>
-              <td>Column content</td>
-              <td>Column content</td>
-            </tr>
-            <tr class="danger">
-              <td>5</td>
-              <td>Column content</td>
-              <td>Column content</td>
-              <td>Column content</td>
-            </tr>
-            <tr class="warning">
-              <td>6</td>
-              <td>Column content</td>
-              <td>Column content</td>
-              <td>Column content</td>
-            </tr>
-            <tr class="active">
-              <td>7</td>
-              <td>Column content</td>
-              <td>Column content</td>
-              <td>Column content</td>
-            </tr>
-          </tbody>
-        </table> 
+        
+
+    </fieldset>
+                  <asp:GridView  class="table table-striped table-hover" ID="GridView1" runat="server" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="Animal,Fecha" DataSourceID="SqlDataSource1">
+                      <Columns>
+                          <asp:BoundField DataField="Animal" HeaderText="Animal" ReadOnly="True" SortExpression="Animal" />
+                          <asp:BoundField DataField="Fecha" HeaderText="Fecha" ReadOnly="True" SortExpression="Fecha" />
+                          <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" SortExpression="Descripcion" />
+                      </Columns>
+                  </asp:GridView>
+                  <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Citas]"></asp:SqlDataSource>
+              </form>
+
     </div>
     </div>
 
