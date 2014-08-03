@@ -101,7 +101,7 @@
 
     <div class="container">
         <div class="col-lg-6">
-        <table class="table table-striped table-hover ">
+        <table class="table table-striped table-hover " runat="server">
           <thead>
             <tr>
               <th>#</th>

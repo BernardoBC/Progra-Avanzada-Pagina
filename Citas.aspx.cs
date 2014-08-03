@@ -5,7 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
-using System.Web.Configuration; 
+using System.Web.Configuration;
+using System.IO;
 
 public partial class Citas : System.Web.UI.Page
 {
@@ -22,10 +23,17 @@ public partial class Citas : System.Web.UI.Page
         String año = inputAño.Value;
         int id;
         String fecha = dia+"/"+mes+"/"+año;
-
-        SqlConnection sqlconnect = new SqlConnection("Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\\Database.mdf;Integrated Security=True");
-        string stmt = "INSERT INTO Database.Citas(Animal, Fecha, Descripcion) VALUES("+animalID+","+fecha+","+descrip+")";
-        SqlCommand insert = new SqlCommand(stmt,sqlconnect);
-        insert.ExecuteNonQuery();     
+        try {
+            SqlConnection sqlconnect = new SqlConnection("Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\\Database.mdf;Integrated Security=True");
+            string stmt = "INSERT INTO Database.Citas(Animal, Fecha, Descripcion) VALUES(" + animalID + "," + fecha + "," + descrip + ")";
+            SqlCommand insert = new SqlCommand(stmt, sqlconnect);
+            insert.ExecuteNonQuery();    
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+        Response.Redirect(Request.RawUrl);
+         
     }
 }
