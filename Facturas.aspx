@@ -4,10 +4,11 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Main" Runat="Server">
 
+    <form id="form1" runat="server">
+
     <div class="containter">
 	<div class="col-lg-6">
             <div class="well bs-component">
-              <form class="form-horizontal">
                 <fieldset>
                   <legend>Crear Factura</legend>
 
@@ -15,14 +16,14 @@
                     <div class="form-group">
                         <label for="inputAnimalID" class="col-lg-2 control-label">Nombre Dueño</label>
                     <div class="col-lg-10">
-                        <input type="text" class="form-control" id="inputAnimalID" placeholder="Nombre Dueño">
+                        <input type="text" class="form-control" id="nombreDueño" placeholder="Nombre Dueño" />
                     </div>
                    </div>
 
                   <div class="form-group">
                     <label for="inputAnimalID" class="col-lg-2 control-label">Animal ID</label>
                     <div class="col-lg-10">
-                      <input type="text" class="form-control" id="inputAnimalID" placeholder="Animal ID">
+                      <input type="text" class="form-control" id="inputAnimalID" placeholder="Animal ID" />
                     </div>
                   </div>
                     
@@ -96,10 +97,27 @@
                     </div>
                   </div>
                 </fieldset>
-              </form>
-            <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div></div>
+              <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div>
+                
+            </div>
           </div>
     </div>
+    <div class="container">
+        <div class="col-lg-6">
+
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="idFacturas" DataSourceID="SqlDataSource1">
+                <Columns>
+                    <asp:BoundField DataField="idFacturas" HeaderText="idFacturas" ReadOnly="True" SortExpression="idFacturas" />
+                    <asp:BoundField DataField="NombreCliente" HeaderText="NombreCliente" SortExpression="NombreCliente" />
+                    <asp:BoundField DataField="Fecha" HeaderText="Fecha" SortExpression="Fecha" />
+                    <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" SortExpression="Descripcion" />
+                </Columns>
+            </asp:GridView>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Facturas]"></asp:SqlDataSource>
+
+        </div><!--col-lg-6-->
+    </div><!--container-->
+    </form>
 
 
 

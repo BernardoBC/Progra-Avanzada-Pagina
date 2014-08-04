@@ -5,8 +5,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Veterianaria</title>
-    <link href="Content/bootstrap.css" rel="stylesheet">
-    <link href="Content/main.css" rel="stylesheet">
+    <link href="Content/bootstrap.css" rel="stylesheet"/>
+    <link href="Content/main.css" rel="stylesheet"/>
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -24,7 +24,7 @@
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                                        
+                                    
                     <li class="<% if (GetActive()== "default")
                             { %>active<% } %>"><a href="Default.aspx">Home</a></li>
                     <li class="<% if (GetActive() == "animales")
