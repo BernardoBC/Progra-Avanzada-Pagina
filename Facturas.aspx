@@ -14,18 +14,17 @@
 
                     
                     <div class="form-group">
-                        <label for="inputAnimalID" class="col-lg-2 control-label">Nombre Dueño</label>
+                        <label for="inputAnimalID" class="col-lg-2 control-label">ID Cliente</label>
                     <div class="col-lg-10">
-                        <input type="text" class="form-control" id="nombreDueño" placeholder="Nombre Dueño" />
+                        <input type="text" class="form-control" id="idCliente" placeholder="ID Cliente" runat="server"/>
                     </div>
                    </div>
-
-                  <div class="form-group">
-                    <label for="inputAnimalID" class="col-lg-2 control-label">Animal ID</label>
-                    <div class="col-lg-10">
-                      <input type="text" class="form-control" id="inputAnimalID" placeholder="Animal ID" />
-                    </div>
-                  </div>
+                     <div class="form-group">
+                          <label for="textArea" class="col-lg-2 control-label">Descripción</label>
+                          <div class="col-lg-10">
+                            <textarea class="form-control" rows="3" id="inputDescripcion" runat="server"></textarea>
+                            </div>
+                        </div>
                     
                   <div class="form-group">
                     <label for="select" class="col-lg-2 control-label">Fecha dd/mm/aaaa</label>                    
@@ -108,7 +107,7 @@
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="idFacturas" DataSourceID="SqlDataSource1">
                 <Columns>
                     <asp:BoundField DataField="idFacturas" HeaderText="idFacturas" ReadOnly="True" SortExpression="idFacturas" />
-                    <asp:BoundField DataField="NombreCliente" HeaderText="NombreCliente" SortExpression="NombreCliente" />
+                    <asp:BoundField DataField="IdCliente" HeaderText="IdCliente" SortExpression="IdCliente" />
                     <asp:BoundField DataField="Fecha" HeaderText="Fecha" SortExpression="Fecha" />
                     <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" SortExpression="Descripcion" />
                 </Columns>

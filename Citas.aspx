@@ -103,7 +103,7 @@
      
     <div class="container">
         <div class="col-lg-6">
-             <asp:GridView runat="server" class="table table-striped table-hover" ID="GridView1"  AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="Animal,Fecha" DataSourceID="SqlDataSource1">
+             <asp:GridView runat="server" class="table table-striped table-hover" ID="GridView1"  AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="Animal,Fecha" DataSourceID="SqlDataSource1" AllowPaging="True">
                       <Columns>
                           <asp:BoundField DataField="Animal" HeaderText="Animal" ReadOnly="True" SortExpression="Animal" />
                           <asp:BoundField DataField="Fecha" HeaderText="Fecha" ReadOnly="True" SortExpression="Fecha" />
