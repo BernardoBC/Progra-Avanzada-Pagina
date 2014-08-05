@@ -7,7 +7,7 @@
     <form class="form-horizontal" id="form1" runat="server">
 
     <div class="containter">
-	<div class="col-lg-6">
+	    <div class="col-lg-6">
             <div class="well bs-component">
                 <fieldset>
                   <legend>Crear Factura</legend>
@@ -25,6 +25,15 @@
                         <label for="textArea" class="col-lg-2 control-label">Descripción</label>
                         <div class="col-lg-10">
                             <textarea class="form-control textarea" rows="3" id="inputDescripcion" runat="server"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="select" class="col-lg-2 control-label">Medicamento</label>
+                        <div class="col-lg-10">
+                            <select class="form-control" id="selectMed" runat="server" name="selectMed">
+                                
+                            </select>
                         </div>
                     </div>
 
@@ -92,12 +101,14 @@
                         </select> 
                     </div>
                   </div>
+
                   <div class="form-group">
-                    <div class="col-lg-10 col-lg-offset-2">
-                      <button class="btn btn-default">Cancel</button>
-                      <button type="submit" class="btn btn-primary">Submit</button>
-                    </div>
-                  </div>
+                        <div class="col-lg-10 col-lg-offset-2">
+                            <button class="btn btn-default">Cancel</button>
+                            <asp:Button ID="Button1"  class="btn btn-primary" runat="server" Text="Submit" OnClick="Button1_Click" />                    
+                        </div>
+                    </div> 
+
                 </fieldset>
               <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div>
                 

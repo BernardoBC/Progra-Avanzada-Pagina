@@ -91,13 +91,15 @@
                             </select> 
                         </div>
                     </div>
+
+                    <!--Botones Cancel y Submit-->
                     <div class="form-group">
                         <div class="col-lg-10 col-lg-offset-2">
                             <button class="btn btn-default">Cancel</button>
                             <asp:Button ID="Button1"  class="btn btn-primary" runat="server" Text="Submit" OnClick="Button1_Click" />                    
                         </div>
                     </div>  
-                    </fieldset>
+                </fieldset>
                 
             <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div></div>
             
