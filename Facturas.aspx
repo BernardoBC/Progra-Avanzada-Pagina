@@ -16,7 +16,7 @@
                     <div class="form-group">
                         <label for="inputIdCliente" class="col-lg-2 control-label">ID Cliente</label>
                         <div class="col-lg-10">
-                            <input type="text" class="form-control" id="idCliente" placeholder="ID Cliente" runat="server"/>
+                            <input type="text" class="form-control" id="inputIdCliente" placeholder="ID Cliente" runat="server"/>
                         </div>
                     </div>
 
@@ -28,6 +28,7 @@
                         </div>
                     </div>
 
+                    <!--Input Medicamento-->
                     <div class="form-group">
                         <label for="select" class="col-lg-2 control-label">Medicamento</label>
                         <div class="col-lg-10">
@@ -41,7 +42,7 @@
                   <div class="form-group">
                     <label for="select" class="col-lg-2 control-label">Fecha dd/mm/aaaa</label>                    
                     <div class="col-md-3">
-                        <select class="form-control" id="selectDia">
+                        <select class="form-control" id="selectDia" runat="server">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -76,7 +77,7 @@
                       </select> 
                     </div>
                     <div class="col-md-3">
-                        <select class="form-control" id="selectMes">
+                        <select class="form-control" id="selectMes" runat="server">
                             <option>1</option>
                             <option>2</option>
                             <option>3</option>
@@ -92,7 +93,7 @@
                         </select> 
                     </div>
                     <div class="col-md-3">
-                        <select class="form-control" id="selectAño">
+                        <select class="form-control" id="selectAño" runat="server">
                             <option>2010</option>
                             <option>2011</option>
                             <option>2012</option>
@@ -105,7 +106,7 @@
                   <div class="form-group">
                         <div class="col-lg-10 col-lg-offset-2">
                             <button class="btn btn-default">Cancel</button>
-                            <asp:Button ID="Button1"  class="btn btn-primary" runat="server" Text="Submit" OnClick="Button1_Click" />                    
+                            <asp:Button ID="Submit_facturas"  class="btn btn-primary" runat="server" Text="Submit" OnClick="Btn_Submit_facturas" />                    
                         </div>
                     </div> 
 

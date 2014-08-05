@@ -31,4 +31,34 @@ public partial class Facturas : System.Web.UI.Page
             selectMed.DataBind();
         }
     }
+    protected void Btn_Submit_facturas(object sender, EventArgs e)
+    {
+        String idCliente = inputIdCliente.Value;        
+        String descrip = inputDescripcion.Value;
+        descrip += ":: Medicamento recetado: "+ selectMed.Value;
+        String dia = selectDia.Value;
+        String mes = selectMes.Value;
+        String año = selectAño.Value;
+
+        String fecha = dia + "/" + mes + "/" + año;
+        String conString = WebConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+        SqlConnection sqlconnect = new SqlConnection(conString);
+        sqlconnect.Open();
+
+        //Consigue el ID mas grande y lo incrementa para el IDfactura
+        SqlCommand myCommand = new SqlCommand("SELECT MAX(idFacturas) FROM Facturas", sqlconnect);       
+        int maxId = Convert.ToInt32(myCommand.ExecuteScalar());
+        maxId++;
+
+        //Insert
+        string stmt = "INSERT INTO Facturas(idFacturas, IdCliente, Fecha, Descripcion) VALUES("+ maxId +","+ idCliente + ",'" + fecha + "','" + descrip + "')";
+        SqlCommand insert = new SqlCommand(stmt, sqlconnect);
+        insert.ExecuteNonQuery();
+
+        sqlconnect.Close();
+
+        //refresh
+        Response.Redirect(Request.RawUrl);
+
+    }
 }
