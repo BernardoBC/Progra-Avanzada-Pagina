@@ -4,28 +4,31 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Main" Runat="Server">
 
-    <form id="form1" runat="server">
+    <form class="form-horizontal" id="form1" runat="server">
 
     <div class="containter">
 	<div class="col-lg-6">
             <div class="well bs-component">
                 <fieldset>
                   <legend>Crear Factura</legend>
-
                     
+                    <!--Input ID Cliente-->
                     <div class="form-group">
-                        <label for="inputAnimalID" class="col-lg-2 control-label">ID Cliente</label>
-                    <div class="col-lg-10">
-                        <input type="text" class="form-control" id="idCliente" placeholder="ID Cliente" runat="server"/>
-                    </div>
-                   </div>
-                     <div class="form-group">
-                          <label for="textArea" class="col-lg-2 control-label">Descripción</label>
-                          <div class="col-lg-10">
-                            <textarea class="form-control" rows="3" id="inputDescripcion" runat="server"></textarea>
-                            </div>
+                        <label for="inputIdCliente" class="col-lg-2 control-label">ID Cliente</label>
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control" id="idCliente" placeholder="ID Cliente" runat="server"/>
                         </div>
-                    
+                    </div>
+
+                    <!--Input Descripcion-->
+                    <div class="form-group">
+                        <label for="textArea" class="col-lg-2 control-label">Descripción</label>
+                        <div class="col-lg-10">
+                            <textarea class="form-control textarea" rows="3" id="inputDescripcion" runat="server"></textarea>
+                        </div>
+                    </div>
+
+                  <!--Input Fecha-->  
                   <div class="form-group">
                     <label for="select" class="col-lg-2 control-label">Fecha dd/mm/aaaa</label>                    
                     <div class="col-md-3">
@@ -104,7 +107,7 @@
     <div class="container">
         <div class="col-lg-6">
 
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="idFacturas" DataSourceID="SqlDataSource1">
+            <asp:GridView ID="GridView1" runat="server" class="table table-striped table-hover" AutoGenerateColumns="False" DataKeyNames="idFacturas" DataSourceID="SqlDataSource1" AllowSorting="True">
                 <Columns>
                     <asp:BoundField DataField="idFacturas" HeaderText="idFacturas" ReadOnly="True" SortExpression="idFacturas" />
                     <asp:BoundField DataField="IdCliente" HeaderText="IdCliente" SortExpression="IdCliente" />
