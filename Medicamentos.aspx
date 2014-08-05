@@ -102,9 +102,14 @@
   </fieldset>
               <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div></div>
 
+       
+
+        </div>
+    </div>
+
         <div class="container">
             <div class="col-lg-6">
-                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="idProducto" DataSourceID="SqlDataSource1">
+                <asp:GridView ID="GridView1" class="table table-striped table-hover" runat="server" AutoGenerateColumns="False" DataKeyNames="idProducto" DataSourceID="SqlDataSource1">
                     <Columns>
                         <asp:BoundField DataField="idProducto" HeaderText="idProducto" ReadOnly="True" SortExpression="idProducto" />
                         <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
@@ -118,9 +123,6 @@
             </div>
 
         </div>
-
-        </div>
-    </div>
 
     </form>
 
