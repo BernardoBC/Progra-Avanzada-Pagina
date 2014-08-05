@@ -35,7 +35,7 @@ public partial class Facturas : System.Web.UI.Page
     {
         String idCliente = inputIdCliente.Value;        
         String descrip = inputDescripcion.Value;
-        descrip += ":: Medicamento recetado: "+ selectMed.Value;
+        descrip += "\nMedicamento recetado: "+ selectMed.Value;
         String dia = selectDia.Value;
         String mes = selectMes.Value;
         String año = selectAño.Value;
