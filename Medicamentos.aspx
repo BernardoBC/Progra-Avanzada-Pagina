@@ -15,13 +15,7 @@
     
       
     <legend>INGRESO DE MEDICAMENTOS</legend>
-
-      <div class="form-group">
-      <label for="IDProducto" class="col-lg-2 control-label">IDProducto</label>
-      <div class="col-lg-5">
-        <input Runat="Server" type="text" class="form-control" id="entradaIDProducto" placeholder="IDProducto"/>
-      </div>
-    </div>
+      
 
     <div class="form-group">
       <label for="Nombre" class="col-lg-2 control-label">Nombre</label>
@@ -125,11 +119,51 @@
                         <asp:BoundField DataField="Cantidad" HeaderText="Cantidad" SortExpression="Cantidad" />
                     </Columns>
                 </asp:GridView>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Producto]"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Producto] WHERE ([idProducto] &gt; @idProducto)">
+                <SelectParameters>
+                    <asp:Parameter DefaultValue="0" Name="idProducto" Type="Int32" />
+                </SelectParameters>
+                </asp:SqlDataSource>
 
             </div>
 
         </div>
+
+     <div class="containter">
+	    <div class="col-lg-6">
+            <div class="well bs-component">
+                <fieldset>
+                    <legend>Cambiar Cantidad</legend>                      
+                    
+                    <!--Input Medicamento-->
+                    <div class="form-group">
+                      <label for="Nombre" class="col-lg-2 control-label">Producto</label>
+                      <div class="col-lg-10">
+                        <input Runat="Server" type="text" class="form-control" id="selectMed" placeholder="Id"/>
+                      </div>
+                    </div>
+
+                    <!--Input Descripcion-->
+                    <div class="form-group">
+                        <label for="textArea" class="col-lg-2 control-label">Nueva Cantidad</label>
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control" id="inputCant" runat="server"></input>
+                        </div>
+                    </div>                    
+
+                    <!--Botones Cancel y Submit-->
+                    <div class="form-group">
+                        <div class="col-lg-10 col-lg-offset-2">
+                            <button class="btn btn-default">Cancel</button>
+                            <asp:Button ID="Button2"  class="btn btn-primary" runat="server" Text="Submit" OnClick="Button_Cant" />                    
+                        </div>
+                    </div>  
+                </fieldset>
+                
+            <div id="source-button1" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div></div>
+            
+        </div>
+    </div>
 
     </form>
 
