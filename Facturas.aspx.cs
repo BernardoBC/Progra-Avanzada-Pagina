@@ -39,8 +39,8 @@ public partial class Facturas : System.Web.UI.Page
         String dia = selectDia.Value;
         String mes = selectMes.Value;
         String año = selectAño.Value;
-
         String fecha = dia + "/" + mes + "/" + año;
+
         String conString = WebConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
         SqlConnection sqlconnect = new SqlConnection(conString);
         sqlconnect.Open();
