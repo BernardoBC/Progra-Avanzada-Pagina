@@ -19,7 +19,7 @@
 
     <div class="form-group">
       <label for="Nombre" class="col-lg-2 control-label">Nombre</label>
-      <div class="col-lg-5">
+      <div class="col-lg-10">
         <input Runat="Server" type="text" class="form-control" id="entradaNombre" placeholder="Nombre"/>
       </div>
     </div>
@@ -27,14 +27,14 @@
 
     <div class="form-group">
       <label for="Cantidad" class="col-lg-2 control-label">Cantidad</label>
-      <div class="col-lg-5">
+      <div class="col-lg-10">
         <input Runat="Server" type="text" class="form-control" id="entraCantidad" placeholder="Cantidad"/>
         </div>
     </div>
       
     <div class="form-group">
       <label for="Precio" class="col-lg-2 control-label">Precio</label>
-      <div class="col-lg-3">
+      <div class="col-lg-10">
         <input Runat="Server" type="text" class="form-control" id="entradaPrecio" placeholder="Precio"/>
         </div>
     </div>
@@ -42,7 +42,7 @@
 
     <div class="form-group">
       <label for="Descripcion" class="col-lg-2 control-label">Descripción</label>
-      <div class="col-lg-5">
+      <div class="col-lg-10">
         <input Runat="Server" type="text" class="form-control" id="entradaDescripcion" placeholder="Descripción"/>
       </div>
     </div>
