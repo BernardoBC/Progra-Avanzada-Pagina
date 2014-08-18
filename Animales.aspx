@@ -70,9 +70,9 @@
                 <Columns>
                     <asp:BoundField DataField="idDueño" HeaderText="idDueño" ReadOnly="True" SortExpression="idDueño" />
                     <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
+                    <asp:BoundField DataField="Apellido" HeaderText="Apellido" SortExpression="Apellido" />
                     <asp:BoundField DataField="Direccion" HeaderText="Direccion" SortExpression="Direccion" />
                     <asp:BoundField DataField="Telefono" HeaderText="Telefono" SortExpression="Telefono" />
-                    <asp:BoundField DataField="Apellido" HeaderText="Apellido" SortExpression="Apellido" />
                 </Columns>
             </asp:GridView>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Dueños]"></asp:SqlDataSource>
