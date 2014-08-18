@@ -17,7 +17,7 @@ public partial class Animales : System.Web.UI.Page
         if (!IsPostBack)
         {
 
-
+            //Llena el dropdown de dueños en el form para agregar animal
             string ConnectString = WebConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
             string QueryString = "select * from Dueños";
 
@@ -90,6 +90,8 @@ public partial class Animales : System.Web.UI.Page
         sqlconnect.Close();
         Response.Redirect(Request.RawUrl);
     }
+
+    //Select Dueño
     protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
     {
         GridViewRow row = GridView1.SelectedRow;
