@@ -90,4 +90,11 @@ public partial class Animales : System.Web.UI.Page
         sqlconnect.Close();
         Response.Redirect(Request.RawUrl);
     }
+    protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        GridViewRow row = GridView1.SelectedRow;
+        String id = row.Cells[1].Text;
+        String redirect = "Dueño.aspx?dueñoId=" + id;
+        Response.Redirect(redirect, false);
+    }
 }

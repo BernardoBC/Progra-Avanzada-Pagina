@@ -66,8 +66,9 @@
     <div class="container">
         <div class="col-lg-6">
             <!--GridView-->
-            <asp:GridView ID="GridView1" class="table table-striped table-hover" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="idDueño" DataSourceID="SqlDataSource1">
+            <asp:GridView ID="GridView1" class="table table-striped table-hover" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="idDueño" DataSourceID="SqlDataSource1" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
                 <Columns>
+                    <asp:CommandField ShowSelectButton="True" />
                     <asp:BoundField DataField="idDueño" HeaderText="idDueño" ReadOnly="True" SortExpression="idDueño" />
                     <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
                     <asp:BoundField DataField="Apellido" HeaderText="Apellido" SortExpression="Apellido" />
