@@ -65,7 +65,7 @@
      
     <div class="container">
         <div class="col-lg-6">
-            <!--GridView-->
+            <!--GridView para agregar Cliente-->
             <asp:GridView ID="GridView1" class="table table-striped table-hover" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="idDueño" DataSourceID="SqlDataSource1" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
                 <Columns>
                     <asp:CommandField ShowSelectButton="True" />
