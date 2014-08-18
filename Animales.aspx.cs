@@ -11,4 +11,8 @@ public partial class Animales : System.Web.UI.Page
     {
 
     }
+    protected void AgregarDueño(object sender, EventArgs e)
+    {
+
+    }
 }
