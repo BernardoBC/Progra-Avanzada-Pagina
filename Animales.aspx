@@ -12,7 +12,7 @@
       
                     <!--Input id-->
                     <div class="form-group">
-                        <label for="inputId" class="col-lg-2 control-label">Id</label>
+                        <label for="inputId" class="col-lg-2 control-label">Cedula</label>
                         <div class="col-lg-10">
                             <input type="text" class="form-control" id="inputDueñoId" placeholder="Id" runat="server" />
                         </div>

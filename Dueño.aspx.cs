@@ -13,7 +13,7 @@ public partial class Dueño : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        //Query string example "Dueños.aspx?dueñoId=342"
         string path = Request.QueryString["dueñoId"];
         if (path != null) {
             String[] selects = new String[5];
@@ -27,7 +27,7 @@ public partial class Dueño : System.Web.UI.Page
             SqlConnection sqlconnect = new SqlConnection(conString);
             sqlconnect.Open();
 
-            //Consigue el ID mas grande y lo incrementa para el IDfactura
+            //Consigue el la informacion del Cliente
             SqlCommand cmdNombre = new SqlCommand(selects[0], sqlconnect);
             SqlCommand cmdApellido = new SqlCommand(selects[1], sqlconnect);
             SqlCommand cmdDireccion = new SqlCommand(selects[2], sqlconnect);
