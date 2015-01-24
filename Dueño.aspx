@@ -13,7 +13,7 @@
         <div class="containter">  
             <legend>Animales</legend>      
             <asp:GridView ID="GridView1" class="table table-striped table-hover" runat="server" AutoGenerateColumns="False" DataKeyNames="idAnimal" DataSourceID="SqlDataSource1">
-                <Columns>
+                <Columns>---sdfksadf
                     <asp:BoundField DataField="idAnimal" HeaderText="idAnimal" ReadOnly="True" SortExpression="idAnimal" />
                     <asp:BoundField DataField="Dueño" HeaderText="Dueño" SortExpression="Dueño" />
                     <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
